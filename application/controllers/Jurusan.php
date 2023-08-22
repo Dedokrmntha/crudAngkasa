@@ -14,6 +14,8 @@ class Jurusan extends CI_Controller {
     public function index()
     {
 		$data['jurusan'] = $this->Jurusan_model->getJurusan();
+		$data['total'] = $this->Jurusan_model->get_total_data();
+        $data['content_view'] = 'data/data_view';
 		$this->load->view('home/header');
 		$this->load->view('home/navbar');
 		$this->load->view('jurusan/index',$data);
@@ -25,7 +27,7 @@ class Jurusan extends CI_Controller {
 		$this->load->view('home/header');
 		$this->load->view('home/navbar');
 		$this->load->view('jurusan/tambah');
-		$this->load->view('home/footer');
+		//$this->load->view('home/footer');
     }
 
 	public function add()
@@ -57,7 +59,7 @@ class Jurusan extends CI_Controller {
         $this->load->view('home/header');
 		$this->load->view('home/navbar');
         $this->load->view('jurusan/edit',$data);
-        $this->load->view('home/footer'); 
+        //$this->load->view('home/footer'); 
 	}
 
 	public function editProcess()
@@ -80,6 +82,11 @@ class Jurusan extends CI_Controller {
 			redirect('jurusan/edit/'.$this->input->post('id_jurusan'));
         }
 	}
+	public function data() {
+        $data['total'] = $this->Jurusan_model->get_total_data();
+        $data['content_view'] = 'data/data_view';
+        $this->load->view('template', $data);
+    }
 }
 
 /* End of file KategoriController.php and path \application\controllers\KategoriController.php */

@@ -40,7 +40,8 @@ class Home extends CI_Controller
 
   public function tabel()
   {
-   
+        $data['total'] = $this->Mahasiswa_model->get_total_data_mahasiswa();
+        $data['content_view'] = 'data/data_view_mhs';
         $this->load->view('home/header');
         $this->load->view('home/navbar');
         $data['mahasiswa'] = $this->Mahasiswa_model->get_mahasiswa();
@@ -71,6 +72,7 @@ public function index() {
   $this->load->view('home/navbar');
   $this->load->view('chart_view');
   $this->load->view('home/footer');
+
 }
 }
 

@@ -44,6 +44,10 @@ class Jurusan_model extends CI_Model
 		$result = $this->db->update('jurusan', $edit);
 		return $result;
 	}
+	public function get_total_data() {
+        $query = $this->db->query('SELECT COUNT(*) as total FROM jurusan');
+        return $query->row()->total;
+    }
                         
 }
 

@@ -33,5 +33,9 @@ class Mahasiswa_model extends CI_Model {
         $this->db->where('id', $id);
         return $this->db->delete('mahasiswa2');
     }
+    public function get_total_data_mahasiswa() {
+        $query = $this->db->query('SELECT COUNT(*) as total FROM mahasiswa2');
+        return $query->row()->total;
+    }
 }
 ?>

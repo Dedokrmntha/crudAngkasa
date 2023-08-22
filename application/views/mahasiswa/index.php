@@ -8,6 +8,8 @@
             </div>
             <h2 class="page-title">TABEL DATA MAHASISWA</h2>
             <a class="btn btn-success " href="<?php echo base_url('mahasiswa/create'); ?>">Tambah</a>
+            <div class="row mt-4">
+            <div class=" text-dark"><h3> Total Data: <?php echo $total; ?></h3></div>
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">

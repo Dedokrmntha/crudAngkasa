@@ -1,12 +1,18 @@
+
 <div class="container-fluid page-body-wrapper">
         <div class="main-panel">
           <div class="content-wrapper">
+          <div class="row justyfy-content-center" >
+				<div class="col-lg-10">
             <div class="page-header">
             </div>
             <h2 class="page-title">TABEL DATA JURUSAN</h2>
             <a class="btn btn-success " href="<?php echo base_url('jurusan/tambah'); ?>">Tambah</a>
-            <div class="row">
-				<div class="col-lg-12">
+            <div class="row mt-4">
+              <div class="col-lg-2">
+                <div class=" text-dark"><h3> Total Data: <?php echo $total; ?></h3></div>
+                </div>
+                </div>
 				      <?php if($this->session->flashdata('success')): ?>
 									<div class="alert alert-success">
 										<?= $this->session->flashdata('success') ?>

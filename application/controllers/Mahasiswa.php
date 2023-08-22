@@ -58,5 +58,10 @@ class Mahasiswa extends CI_Controller {
         $this->Mahasiswa_model->delete_mahasiswa($id);
         redirect('home/tabel');
     }
+    public function data() {
+        $data['total'] = $this->Mahasiswa_model->get_total_data_mahasiswa();
+        $data['content_view'] = 'data/data_view_mhs';
+        $this->load->view('template', $data);
+    }
 }
 ?>
