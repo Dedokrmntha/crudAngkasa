@@ -24,6 +24,7 @@
                                     <th>Nama</th>
                                     <th>NIM</th>
                                     <th>Umur</th>
+                                    <th>jenis Kelamin</th>
                                     <th>Alamat</th>
                                     <th>Jurusan</th>
                                     <th>Aksi</th>
@@ -38,6 +39,7 @@
                                                     <td><?php echo $mhs->nama; ?></td>
                                                     <td><?php echo $mhs->nim; ?></td>
                                                     <td><?php echo $mhs->umur; ?></td>
+                                                    <td>Laki-Laki</td>
                                                     <td><?php echo $mhs->alamat; ?></td>
                                                     <td><?php echo $mhs->nama_jurusan; ?></td>
                                                     <td>
