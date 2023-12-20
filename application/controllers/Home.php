@@ -36,6 +36,7 @@ class Home extends CI_Controller
     $this->load->view('home/navbar');
     $this->load->view('home/body',$data);
     $this->load->view('home/footer');
+    
   }
 
   public function tabel()
@@ -67,10 +68,12 @@ public function tabel_jurusan()
         $this->load->view('home/footer');
 
 }
-public function index() {
+public function bar() {
   $this->load->view('home/header');
   $this->load->view('home/navbar');
-  $this->load->view('chart_view');
+  $data['mahasiswa'] = $this->Mahasiswa_model->get_mahasiswa();
+  $data['total_mahasiswa'] = $this->Mahasiswa_model->get_total_data_mahasiswa();
+  $this->load->view('home/cart',$data);
   $this->load->view('home/footer');
 
 }

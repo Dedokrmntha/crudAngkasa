@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Pie Chart Example</title>
     <!-- Include Chart.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="<?=base_url('assets/js/chart.js')?>"></script>
 </head>
 <body>
 

@@ -70,7 +70,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('home/index')?>" class="nav-link" target="_blank">
+                <a href="<?=base_url('home/bar')?>" class="nav-link" target="_blank">
                   <i class="mdi mdi-file-document-box menu-icon"></i>
                   <span class="menu-title">Docs</span></a>
               </li>

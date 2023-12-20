@@ -8,8 +8,9 @@ class Mahasiswa extends CI_Controller {
     }
 
     public function index() {
-        //$data['mahasiswa'] = $this->Mahasiswa_model->get_mahasiswa();
-        //$this->load->view('mahasiswa/index', $data);
+        $data['mahasiswa'] = $this->Mahasiswa_model->get_mahasiswa();
+        $data['total_mahasiswa'] = $this->Mahasiswa_model->get_total_data_mahasiswa();
+        $this->load->view('home/cart', $data);
     }
 
     public function create() {
